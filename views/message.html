@@ -27,31 +27,29 @@
           <div>组成</div>
           <ul id="content-list-more">
               <li>
-                  <span>分类</span>
+                  <span>小本的日常</span>
                   <span class="ul-more"> ▶ </span>
                   <ul class="more-list">
-                      <li>心情</li>
-                      <li>生活</li>
-                      <li>学习</li>
-                      <li>杂谈</li>
+                      <li><a href="/sort">心情</a></li>
+                      <li><a href="/sort">生活</a></li>
+                      <li><a href="/sort">杂谈</a></li>
                   </ul>
               </li>
               <li>
-                  <span>友链</span>
+                  <span>小本的故事</span>
                   <span class="ul-more"> ▶ </span>
                   <ul class="more-list">
-                      <li>网易云音乐</li>
-                      <li>简书</li>
-                      <li>CSDN</li>
-                      <li>Github</li>
+                      <li><a href="https://music.163.com/#/my/m/music/playlist?id=868934926">网易云音乐</a></li>
+                      <li><a href="https://www.jianshu.com/u/b79a37302faf">简书</a></li>
+                      <li><a href="https://github.com/2846256621">Github</a></li>
                   </ul>
               </li>
               <li>
                   <span>推荐</span>
                   <span class="ul-more"> ▶ </span>
                   <ul class="more-list">
-                      <li>JavaScript</li>
-                      <li>jQuery</li>
+                      <li><a href="https://www.w3school.com.cn/">w3school</a></li>
+                      <li><a href="https://www.runoob.com/">菜鸟教程</a></li>
 
                   </ul>
               </li>
@@ -62,7 +60,7 @@
         <div id="content-right-top">
             <div>
                 <span>小本的个人博客</span>
-                <span id="home"><a href="about.html"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>返回</a></span>
+                <span id="home"><a href="/about"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>返回</a></span>
                 <div id="btn-list">
                     <button><a href=""></a>github</button>
                     <button><a href=""></a>简书</button>
@@ -87,118 +85,24 @@
 
         </div>
         <div id="content-right-body">
+            {{each data as value}}
             <div class="dialog-box">
-                <img src="../public/image/01.jpg">
+                <img src="{{value.headimg}}">
                 <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
+                    <span>{{value.username}}</span>
+                    <span>{{value.date}}</span>
                     <div>
-                        <span>人生路漫漫，少不了温馨难忘的美好瞬间，也免不了凄风苦雨的泥泞征程。无论是否精彩，都是不容错过的无悔人生，是值得一生品茗的真实韵味。</span>
+                        <span>{{value.content}}</span>
                     </div>
-                    <span>♡&nbsp;来自windows 10</span>
+                    <span>♡&nbsp;{{value.froms}}</span>
                 </div>
             </div>
-            <div class="dialog-box">
-                <img src="../public/image/02.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>大江东去，淘尽的不只是英雄、是非成败不需要我们转头，因为回头太难，甚至你没有时间和机会。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/03.jpg">
-                    <div class="triangle-div">
-                        <span>小本</span>
-                        <span>January 31st, 2019 at 03:22 pm</span>
-                        <div>
-                            <span>我是你头顶的云，是你耳畔的风，是你涉过的潮来潮去，是你眼中的烂漫山花，亦是你行过的万里山河，你亲手所植的八百里曼珠沙华，每一株都是我。</span>
-                        </div>
-                        <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/04.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>可是有些人总会要走，有些风景注定只能一个人欣赏，而有些话，也只能落寞地埋在心底。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/05.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>这是眼泪吗？原来眼泪是这么的温暖，我一直以为，哀伤的东西都是冰冷的。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/01.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>人生路漫漫，少不了温馨难忘的美好瞬间，也免不了凄风苦雨的泥泞征程。无论是否精彩，都是不容错过的无悔人生，是值得一生品茗的真实韵味。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/02.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>大江东去，淘尽的不只是英雄、是非成败不需要我们转头，因为回头太难，甚至你没有时间和机会。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/03.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>我是你头顶的云，是你耳畔的风，是你涉过的潮来潮去，是你眼中的烂漫山花，亦是你行过的万里山河，你亲手所植的八百里曼珠沙华，每一株都是我。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/04.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>可是有些人总会要走，有些风景注定只能一个人欣赏，而有些话，也只能落寞地埋在心底。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
-            <div class="dialog-box">
-                <img src="../public/image/05.jpg">
-                <div class="triangle-div">
-                    <span>小本</span>
-                    <span>January 31st, 2019 at 03:22 pm</span>
-                    <div>
-                        <span>这是眼泪吗？原来眼泪是这么的温暖，我一直以为，哀伤的东西都是冰冷的。</span>
-                    </div>
-                    <span>♡&nbsp;来自windows 10</span>
-                </div>
-            </div>
+            {{/each}}
+            <div id="bottom-box"><div>
         </div>
 
+        </div>
+        </div>
     </div>
 </div>
 <script src="../public/javascript/message.js"></script>

@@ -48,7 +48,26 @@ a{
     color: #343232;
     background-color: rgba(238 ,236,231,0.6);
 }
-
+#read-article p {
+    font-size: 23px;
+    color: #ae3637;
+    display: block;
+    padding: 10px 5px;
+    border-bottom: 1px solid #9c9caa;
+}
+body .recommend a{
+    display: inline-block;
+    width: 80%;
+    white-space: nowrap;
+    color: #4b4f28 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.recommend a:hover{
+    color: #ae3637 !important;
+}
 @font-face {
     font-family: "blog_en_style";
     src: url("../font_style/DKCoolCrayon.ttf");

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>首页</title>
+    <title>Little fairy's blog</title>
     <link rel="stylesheet" href="../public/css/home.css">
     <link rel="stylesheet" href="../public/icon/font_kmfbrbs0l5/iconfont.css">
     <link rel="stylesheet" href="../public/icon/font_36abcmk0h9g/iconfont.css">
@@ -34,9 +34,9 @@
         <div id="nav">
         <ul style="list-style: none">
             <li style="font-size: 30px;float: left"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
-            <li><a href="about.html"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
-            <li><a href="sort.html"><span class="iconfont icon-fenlei-copy"></span>分类</a></li>
-            <li><a href="files.html"><span class="iconfont icon-tianjia"></span>归档</a></li>
+            <li><a href="/about"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
+            <li><a href="/sort"><span class="iconfont icon-fenlei-copy"></span>分类</a></li>
+            <li><a href="/files"><span class="iconfont icon-tianjia"></span>归档</a></li>
             <li><a href="#"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>首页</a></li>
         </ul>
        </div>
@@ -47,16 +47,16 @@
     </div>
     <div id="bg-content">
         <div id="content-img">
-            <p class="word"><span class="iconfont icon-ic_calendar"></span>每日一句</p>
+            <p class="word"><span class="iconfont icon-ic_calendar"></span>关于孤独我想说的话</p>
             <p class="sentence">在你坚持不下去的时候，告诉自己昨天下了雨，今天刮了风，明天太阳就出来了。   ----to myself</p>
         </div>
         <div id="content-body">
             {{each data as value}}
             <div class="content-article">
                 <h2>{{value.title}}</h2>
-                <p class="tag">{{value.date}} &nbsp;&nbsp;#{{value.tag}}</p>
+                <p class="tag">{{value.date}} &nbsp;&nbsp;#</p>
                 <p>{{value.content}}</p>
-                <button class="btn"><a href="view.html?id={{value.id}}">阅读全文</a></button>
+                <button class="btn"><a href="/view?id={{value.id}}" id="btn">阅读全文</a></button>
             </div>
             {{/each}}
 
@@ -69,9 +69,9 @@
             </div>
             <!--博主介绍-->
             <div class="my-article blog">
-                <img src="../public/image/cat.png"><br>
+                <img src="../public/image/head.jpg"><br>
                 <span id="blog-name">little fairy yu</span>
-                <span id="blog-desc">今朝有酒今朝醉</span>
+                <span id="blog-desc">浮生有梦三千场</span>
                 <div id="blog-all">
                     <div class="blog-sort">
                         <div>12</div>
