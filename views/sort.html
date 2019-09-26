@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>分类</title>
+    <link rel="stylesheet" href="../public/css/view.css">
+    <link rel="stylesheet" href="../public/css/sort.css">
+    <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/icon/font_kmfbrbs0l5/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_36abcmk0h9g/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_xicukysaxqk/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_all/iconfont.css">
+    <script src="../public/icon/font_36abcmk0h9g/iconfont.js"></script>
+    <script src="../public/javascript/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="nav">
+    <ul style="list-style: none">
+        <li style="font-size: 30px;float: left"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
+        <li><a href="about.html"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
+        <li><a href="#"><span class="iconfont icon-fenlei-copy"></span>分类</a></li>
+        <li><a href="files.html"><span class="iconfont icon-tianjia"></span>归档</a></li>
+        <li><a href="home.html"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>首页</a></li>
+    </ul>
+</div>
+
+<div id="content">
+    <div id="sort-list">
+        <div class="sort">
+            <div>
+        <span class="date">
+           <span class="iconfont icon-ic_calendar"></span> 是梦吗
+        </span>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="#">随笔</a>
+                        <div>
+                            <ul>
+                                <li>HEXO解决Google字库链接缓慢问题</li>
+                                <li>博客搬迁</li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#">心情</a>
+                        <div>
+                            <ul>
+                                <li>HEXO解决Google字库链接缓慢问题</li>
+                                <li>博客搬迁</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">html</a>
+                        <div>
+                            <ul>
+                                <li>《AngularJS深度剖析与最佳实践》学习笔记（二）</li>
+                                <li>《AngularJS深度剖析与最佳实践》学习笔记（一）</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">CSS</a>
+                        <div>
+                            <ul>
+                                <li>HEXO解决Google字库链接缓慢问题</li>
+                                <li>博客搬迁</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Javascript</a>
+                        <div>
+                            <ul>
+                                <li>《AngularJS深度剖析与最佳实践》学习笔记（二）</li>
+                                <li>《AngularJS深度剖析与最佳实践》学习笔记（一）</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">nodeJS</a>
+                        <div>
+                            <ul>
+                                <li>《AngularJS深度剖析与最佳实践》学习笔记（二）</li>
+                                <li>《AngularJS深度剖析与最佳实践》学习笔记（一）</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    <div class=" list">
+        <div id="search">
+            <input value="" placeholder="    搜索">
+            <span class="iconfont icon-sousuo"></span>
+        </div>
+        <div class="my-article">
+            <p>标签云</p>
+            <ul style="list-style: none">
+                {{each data as value}}
+                <li class="li"><a href="#">{{value.tag}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="my-href">
+            <p>个人链接</p>
+            <ul style="list-style: none">
+                <li><span class="iconfont icon-github"></span><a href="https://github.com/2846256621" style="color: #ae3637">Github</a></li>
+                <li><span class="iconfont icon-shu2"></span><a href="https://www.jianshu.com/u/b79a37302faf" style="color: #6eae74">简书</a></li>
+                <li><span class="iconfont icon-music" style=" font-weight: bolder;padding: 0 20px 0 0px"></span><a href="https://music.163.com/#" style="color: #d38439;">网易云音乐</a></li>
+                <li><span class="iconfont icon-weixin"></span><a href="https://www.jianshu.com/u/90885d6b88e1" style="color: #605751">我旁边人的微信</a></li>
+            </ul>
+        </div>
+        <div class="friend-href">
+            <p>友情链接</p>
+            <ul style="list-style: none">
+                <li>
+                    <img src="../public/image/01.jpg" alt="head">
+                    <a href="#" style="color: #ae3637">little fairy</a>
+                </li>
+                <li>
+                    <img src="../public/image/02.jpg" alt="head">
+                    <a href="#" style="color: #6eae74">龟兔</a>
+                </li>
+                <li>
+                    <img src="../public/image/03.jpg" alt="head">
+                    <a href="#" style="color: #d38439">小本</a>
+                </li>
+                <li>
+                    <img src="../public/image/04.jpg" alt="head">
+                    <a href="#" style="color: #8e7463">sunny</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../public/javascript/sort.js"></script>
+</body>
+</html>

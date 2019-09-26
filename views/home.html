@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/icon/font_kmfbrbs0l5/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_36abcmk0h9g/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_xicukysaxqk/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_all/iconfont.css">
+    <link rel="stylesheet" href="../public/css/calendar.css">
+    <script src="../public/icon/font_36abcmk0h9g/iconfont.js"></script>
+    <script src="../public/javascript/jquery-3.3.1.min.js"></script>
+    <script src="../public/javascript/jquery.min.js"></script>
+    <script src="../public/javascript/calendar.js"></script>
+    <script src="../public/icon/font_3sz0qjh1rx/iconfont.js"></script>
+    </head>
+<body>
+<div id="icon-cat">
+    <div id="cat-img">
+        <img src="../public/image/cat.png" alt="cat" id="img">
+        <svg class="icon" aria-hidden="true" id="btn-hide">
+            <use xlink:href="#icon-shangjiantou"></use>
+        </svg>
+    </div>
+    <div id="cat-description">
+        <span> little fairy yu</span>
+        <span style="font-size: 20px">you are my</span>
+        <span style="font-size: 20px">FIREND</span>
+    </div>
+</div>
+<div id="content">
+    <div id="bg-gound">
+        <div id="nav">
+        <ul style="list-style: none">
+            <li style="font-size: 30px;float: left"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
+            <li><a href="about.html"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
+            <li><a href="sort.html"><span class="iconfont icon-fenlei-copy"></span>分类</a></li>
+            <li><a href="files.html"><span class="iconfont icon-tianjia"></span>归档</a></li>
+            <li><a href="#"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>首页</a></li>
+        </ul>
+       </div>
+       <div id="content-title">
+            <span style="font-weight: bolder"> --- Welcome To My World ---</span><br>
+            <span>If you well is sunny !</span>
+        </div>
+    </div>
+    <div id="bg-content">
+        <div id="content-img">
+            <p class="word"><span class="iconfont icon-ic_calendar"></span>每日一句</p>
+            <p class="sentence">在你坚持不下去的时候，告诉自己昨天下了雨，今天刮了风，明天太阳就出来了。   ----to myself</p>
+        </div>
+        <div id="content-body">
+            {{each data as value}}
+            <div class="content-article">
+                <h2>{{value.title}}</h2>
+                <p class="tag">{{value.date}} &nbsp;&nbsp;#{{value.tag}}</p>
+                <p>{{value.content}}</p>
+                <button class="btn"><a href="view.html?id={{value.id}}">阅读全文</a></button>
+            </div>
+            {{/each}}
+
+        </div>
+        <div class="content-list">
+            <!--搜索-->
+            <div id="search">
+                <input value="" placeholder="     搜索">
+                <span class="iconfont icon-sousuo"></span>
+            </div>
+            <!--博主介绍-->
+            <div class="my-article blog">
+                <img src="../public/image/cat.png"><br>
+                <span id="blog-name">little fairy yu</span>
+                <span id="blog-desc">今朝有酒今朝醉</span>
+                <div id="blog-all">
+                    <div class="blog-sort">
+                        <div>12</div>
+                        <span>文章</span>
+                    </div>
+                    <div class="blog-sort">
+                        <div>10</div>
+                        <span>标签</span>
+                    </div>
+                    <div class="blog-sort">
+                        <div>3</div>
+                        <span>分类</span>
+                    </div>
+                </div>
+
+            </div>
+            <!--近期文章-->
+            <div class="my-article">
+                <p>近期文章</p>
+                <ul style="list-style: none">
+                    {{each data as value index}}
+                    <li><a href="#"><span class="num">{{index+1}}</span>{{value.title}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <!--背景音乐-->
+            <div class="friend-href video">
+                <!--<video src="../public/music/DAOKO,米津玄師%20-%20打上花火.mp3" controls="controls"></video>-->
+
+                <div>
+                    <div id="name">
+                        <svg class="icon-music" aria-hidden="true">
+                            <use xlink:href="#icon-yinle"></use>
+                        </svg>
+                        <span>米津玄师 - 打上花火</span>
+                    </div>
+                    <div id="bg-music">
+                        <button id="btn-pre" ><span style=" position: absolute;top: 12px;left: 10%;"><</span></button>
+                        <button id="btn-next" ><span style="position: absolute;top: 12px;left: 29%;">></span></button>
+                    </div>
+                    <audio id="audio" src="../public/music/1.mp3" controls ></audio>
+                </div>
+
+            </div>
+            <!--日历-->
+            <div class="friend-href">
+                 <div id="calendar" class="calendar"></div>
+            </div>
+            <!--</div>-->
+
+        </div>
+    </div>
+
+</div>
+<script src="../public/javascript/music.js"></script>
+<script src="../public/javascript/home.js"></script>
+</body>
+</html>

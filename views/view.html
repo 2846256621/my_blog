@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>阅读全文</title>
+    <link rel="stylesheet" href="../public/css/view.css">
+    <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/icon/font_kmfbrbs0l5/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_36abcmk0h9g/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_xicukysaxqk/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_all/iconfont.css">
+    <script src="../public/icon/font_36abcmk0h9g/iconfont.js"></script>
+</head>
+<body>
+<div id="nav">
+    <ul style="list-style: none">
+        <li style="font-size: 30px;float: left"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
+        <li><a href="about.html"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
+        <li><a href="sort.html"><span class="iconfont icon-fenlei-copy"></span>分类</a></li>
+        <li><a href="files.html"><span class="iconfont icon-tianjia"></span>归档</a></li>
+        <li><a href="home.html"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>首页</a></li>
+    </ul>
+</div>
+<div id="content">
+    {{each data as value}}
+    <div id="read-article">
+        <p>{{value.title}}</p><br>
+        <p>
+           {{value.content}}
+        </p>
+    </div>
+    {{/each}}
+    <div class="content-list" style="top:0">
+        <!--搜索-->
+        <div id="search">
+            <input value="" placeholder="     搜索">
+            <span class="iconfont icon-sousuo"></span>
+        </div>
+        <!--博主介绍-->
+        <div class="my-article blog">
+            <img src="../public/image/cat.png"><br>
+            <span id="blog-name">little fairy yu</span>
+            <span id="blog-desc">今朝有酒今朝醉</span>
+            <div id="blog-all">
+                <div class="blog-sort">
+                    <div>12</div>
+                    <span>文章</span>
+                </div>
+                <div class="blog-sort">
+                    <div>10</div>
+                    <span>标签</span>
+                </div>
+                <div class="blog-sort">
+                    <div>3</div>
+                    <span>分类</span>
+                </div>
+            </div>
+
+        </div>
+        <!--近期文章-->
+        <div class="my-article">
+            <p>近期文章</p>
+            <ul style="list-style: none">
+                <li><a href="#"><span class="num">1</span>我要的2019，每一天都充满着惊喜和期待</a></li>
+                <li><a href="#"><span class="num">2</span>我鼓励你做一个冷淡的人</a></li>
+                <li><a href="#"><span class="num">3</span>今天，收入20000+</a></li>
+                <li><a href="#"><span class="num">4</span>多系统arch访问其他磁盘分区</a></li>
+                <li><a href="#"><span class="num">5</span>为啥有些人，永远都富不起来？</a></li>
+
+            </ul>
+        </div>
+        <!--背景音乐-->
+        <div class="friend-href video">
+            <!--<video src="../public/music/DAOKO,米津玄師%20-%20打上花火.mp3" controls="controls"></video>-->
+
+            <div>
+                <div id="name">
+                    <svg class="icon-music" aria-hidden="true">
+                        <use xlink:href="#icon-yinle"></use>
+                    </svg>
+                    <span>米津玄师 - 打上花火</span>
+                </div>
+                <div id="bg-music">
+                    <button id="btn-pre" ><span style=" position: absolute;top: 12px;left: 10%;"><</span></button>
+                    <button id="btn-next" ><span style="position: absolute;top: 12px;left: 29%;">></span></button>
+                </div>
+                <audio id="audio" src="../public/music/1.mp3" controls ></audio>
+            </div>
+
+        </div>
+        <div class="my-href">
+            <p>个人链接</p>
+            <ul style="list-style: none">
+                <li><span class="iconfont icon-github"></span><a href="https://github.com/2846256621" style="color: #ae3637">Github</a></li>
+                <li><span class="iconfont icon-shu2"></span><a href="https://www.jianshu.com/u/b79a37302faf" style="color: #6eae74">简书</a></li>
+                <li><span class="iconfont icon-music" style=" font-weight: bolder;padding: 0 20px 0 0px"></span><a href="https://music.163.com/#" style="color: #d38439;">网易云音乐</a></li>
+                <li><span class="iconfont icon-weixin"></span><a href="https://www.jianshu.com/u/90885d6b88e1" style="color: #605751">我旁边人的微信</a></li>
+            </ul>
+        </div>
+        <div class="friend-href">
+            <p>友情链接</p>
+            <ul style="list-style: none">
+                <li>
+                    <img src="../public/image/01.jpg" alt="head">
+                    <a href="#" style="color: #ae3637">little fairy</a>
+                </li>
+                <li>
+                    <img src="../public/image/02.jpg" alt="head">
+                    <a href="#" style="color: #6eae74">龟兔</a>
+                </li>
+                <li>
+                    <img src="../public/image/03.jpg" alt="head">
+                    <a href="#" style="color: #d38439">小本</a>
+                </li>
+                <li>
+                    <img src="../public/image/04.jpg" alt="head">
+                    <a href="#" style="color: #8e7463">sunny</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

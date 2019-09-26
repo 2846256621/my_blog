@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url("../image/body.jpg") no-repeat  100% 100% fixed;
+    background-size:cover;
+}
+#nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(180, 184, 203, 0.4);
+    box-shadow: 0 1px 1px #c2b9b9;
+    font-size: 27px;
+    font-weight: bolder;
+    font-family: "blog_art_style",sans-serif;
+}
+#nav ul li{
+    position: relative;
+    float: right;
+    padding: 0 30px;
+    line-height: 50px;
+    color: #7a4a51;
+
+}
+#nav ul li span{
+    margin-right: 8px;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #7a4a51;
+    font-size: 27px;
+}
+#read-article {
+    width: 56%;
+    border: 1px solid #9c9caa;
+    position: relative;
+    top: 20px;
+    border-radius: 4px;
+    margin-left: 5%;
+    font-size: 21px;
+    padding: 2%;
+    color: #343232;
+    background-color: rgba(238 ,236,231,0.6);
+}
+
+@font-face {
+    font-family: "blog_en_style";
+    src: url("../font_style/DKCoolCrayon.ttf");
+}
+@font-face {
+    font-family: "blog_zh_style";
+    src: url("../font_style/HYQuHeiW.ttf");
+}
+@font-face {
+    font-family: "blog_art_style";
+    src: url("../font_style/zhilan.ttf");
+}
+@media screen and (max-width: 500px) {
+    #nav {
+        height: 100px;
+    }
+    #nav ul{
+        width: 90%;
+    }
+    #nav ul li{
+        font-size: 20px;
+        padding: 0 5px;
+    }
+    #nav ul li a{
+        font-size: 20px;
+    }
+    .content-list{
+        display: none;
+    }
+    #content #read-article {
+        width: 81% !important;
+        border: 1px solid #9c9caa;
+        position: relative;
+        top: 20px;
+        border-radius: 4px;
+        margin:0 auto;
+        font-size: 21px;
+        padding: 2%;
+        color: #343232;
+        background-color: rgba(238 ,236,231,0.6);
+    }
+
+}
+@media screen and (max-width: 320px) {
+    #nav {
+        height: 150px;
+    }
+    #nav ul{
+        width: 100%;
+    }
+    #nav ul li{
+        float: left;
+        font-size: 20px;
+        padding: 0 5px;
+    }
+}
+@media screen and (max-width: 812px) and (min-width: 375px){
+    #nav ul {
+        width: 99%;
+    }
+}
+@media screen and (max-width: 414px) and (min-width: 736px){
+    #nav ul {
+        width: 91% !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    #nav ul {
+        width: 100%;
+    }
+
+    #nav {
+        height: 100px;
+    }
+
+    #nav ul li {
+        /*float: left;*/
+        font-size: 19px;
+        padding: 0 1px;
+    }
+}

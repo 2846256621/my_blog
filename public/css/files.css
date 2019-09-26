@@ -1,0 +1,121 @@
+#container{
+    width: 75%;
+    font-weight: bolder;
+    margin: 10px auto;
+    font-family:  "blog_art_style",sans-serif;
+}
+
+.sort{
+    position:relative;
+    margin: 20px 0;
+    width: 100%;
+    border: 1px solid #858791;
+    border-radius: 4px;
+    background-color: rgba(225,225,225,0.3);
+}
+.sort ul {
+    float: left;
+    margin: 20px;
+    list-style: none;
+    width: 92%;
+}
+.sort:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.sort ul li{
+    margin: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.sort ul li {
+    margin:10px;
+    width:100%;
+    color: #5d5d64;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.sort ul li:hover{
+    color: #8396d7;
+    cursor: pointer;
+}
+.sort ul li a{
+    color: #b94a48;
+    font-size: 26px;
+}
+.sort ul li a:hover{
+    color:#d38439;
+}
+.date{
+    color: #ae3637;
+}
+.date .iconfont{
+    color: #454545;
+}
+@font-face {
+    font-family: "blog_art_style";
+    src: url("../font_style/zhilan.ttf");
+}
+@media screen and  (min-width: 414px)  and (max-width: 736px){
+    #container{
+        width: 82%;
+    }
+    #nav ul {
+        width: 91% !important;
+        height: 100%;
+    }
+    .sort ul {
+        margin: 0;
+        list-style: none;
+        width: 90%;
+    }
+}
+@media screen and  (min-width: 320px) and (max-width: 568px){
+    #nav {
+        height: 100px;
+    }
+    #nav ul{
+        width: 100%;
+    }
+    #nav ul li{
+
+        font-size: 20px;
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 812px) and (min-width: 375px){
+    #nav ul {
+        width: 100%;
+    }
+    #container {
+        width: 82%;
+    }
+    .sort ul {
+        float: left;
+         margin: 0;
+        list-style: none;
+        width: 92%;
+    }
+}
+@media screen and (max-width: 320px) {
+    #nav ul {
+        width: 102%;
+    }
+
+    #nav {
+        height: 100px;
+    }
+
+    #nav ul li {
+        /*float: left;*/
+        font-size: 19px;
+        padding: 0 1px;
+    }
+    #nav ul li a span{
+        font-size: 19px;
+    }
+}

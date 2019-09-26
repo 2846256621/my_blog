@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1",
+    "mime": "^2.4.4",
+    "mysql": "latest",
+    "url": "^0.11.0"
+  },
+  "hexo-syntaxhightlight": "^1.0.0"
+}
