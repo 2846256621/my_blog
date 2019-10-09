@@ -40,7 +40,6 @@ app.get('/',function (req,res) {
         for(var i =0;i<result.length;i++){
             result[i].date =  timestampToTime(Date.parse( result[i].date));
         }
-        // console.log(result[0].date);
         res.render('home.html',{
             data: result
         });
@@ -104,26 +103,19 @@ app.post('/message',function (req,res) {
         res.redirect('/message');
     });
 });
-app.get('/sort',function (req,res) {
-    let result1,result2;
-    connection.query('select distinct tagname from tag',function (err, result, fields) {
+app.get('/add',function (req,res) {
+    res.render('add.html');
+});
+app.post('/add',function (req,res) {
+    let data = req.body;
+    let  addSql = 'insert into article(title,content,date) VALUES(?,?,?)';
+    let  addSqlParams = [data.title,data.content,new Date().toLocaleString()];
+    connection.query(addSql,addSqlParams,function (err, result, fields) {
         if(err){
             console.log('[SELECT ERROR]',err.message);
-            return;
+            return result;
         }
-        result1 =result;
-    });
-    connection.query('select * from  article where id in (select articleId from tag_article where tagId = 1)',function (err, result, fields) {
-        if(err){
-            console.log('[SELECT ERROR]',err.message);
-            return;
-        }
-        result2 = result;
-        // console.log(result2);
-        res.render('sort.html',{
-            data1: result1,
-            data2:result2
-        });
+        res.redirect('/');
     });
 });
 
@@ -137,7 +129,6 @@ app.get('/view',function (req,res) {
             return;
         }
         let converter = new showdown.Converter();
-        // console.log(result);
         let title = converter.makeHtml(result[0].title);
         let content = converter.makeHtml(result[0].content);
         console.log( typeof  title, typeof content);
@@ -147,10 +138,61 @@ app.get('/view',function (req,res) {
         });
     });
 });
-// app.get('/view_arc',function (req,res) {
-//     res.render('view.html');
-// });
+//删除文章
+app.get('/delete',function (req,res) {
+    let sql = 'delete from article where id='+req.query.id;
+    connection.query(sql,[],function (err, result, fields) {
+        if(err){
+            console.log('[SELECT ERROR]',err.message);
+            return;
+        }
+        res.redirect('/');
+    });
+});
 
+//修改文章
+app.get('/modify',function (req,res) {
+   let sql = 'select* from article where id='+ req.query.id;
+    connection.query(sql,[],function (err, result, fields) {
+        if(err){
+            console.log('[SELECT ERROR]',err.message);
+            return;
+        }
+        res.render('modify.html',{
+            data:result
+        });
+    });
+});
+app.post('/modify',function (req,res) {
+    let modSql = 'UPDATE article SET title= ?,content= ? WHERE id = ?';
+    let modSqlParams = [req.body.title, req.body.content,parseInt(req.body.id)];
+    connection.query(modSql,modSqlParams,function (err, result) {
+        if(err){
+            console.log('[UPDATE ERROR] ',err.message);
+            return;
+        }
+        res.redirect('/');
+    });
+});
+
+
+//搜索
+app.get('/search',function (req,res) {
+
+    let sql = `select* from article where title='${req.query.search}'`;
+    console.log(sql);
+    connection.query(sql,[],function (err, result, fields) {
+        if(err){
+            console.log('[SELECT ERROR]',err.message);
+            return;
+        }
+        console.log(result);
+        res.render('view.html',{
+            title: req.query.search,
+            content: result[0].content
+        });
+    });
+});
 app.listen(9090,function () {
     console.log("http://localhost:9090");
 });

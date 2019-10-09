@@ -97,9 +97,9 @@ body{
 }
 body #touch-me #message-board{
     font-size: 23px;
-    top: 15%;
+    top:4%;
     position: absolute;
-    right: 10%;
+    right: 0;
     cursor: pointer;
 }
 
@@ -115,19 +115,42 @@ body #touch-me #message-board{
     font-family: "blog_art_style";
     src: url("../font_style/zhilan.ttf");
 }
-@media screen and (max-width: 500px) {
-    #nav {
-        height: 100px;
-    }
-    #nav ul{
-        width: 90%;
-    }
-    #nav ul li{
-        font-size: 20px;
-        padding: 0 5px;
+/*iphone 5*/
+@media screen and (max-width: 568px) {
+    #read-article p {
+        font-size: 20px !important;
+        padding: 2px 5px;
+        margin-left: 25px;
     }
     #nav ul li a{
+        font-size: 21px;
+        padding: 0 1px;
+    }
+    #introduce ul li {
+        margin-top: 10px;
+        color: #364f3b;
+        font-size: 19px;
+    }
+    #introduce-img p{
+        display: none;
+        left: 0;
+    }
+    #introduce {
+        position: relative;
+        display: inline-block;
+        width: 87%;
+        left: 0;
+        top: 5px;
+        margin: 70px 20px;
+        padding-left: 3%;
+        padding-bottom: 8px;
+    }
+    body #touch-me #message-board {
         font-size: 20px;
+        top: -10%;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
     }
     #introduce-img img{
         display: inline-block;
@@ -137,17 +160,6 @@ body #touch-me #message-board{
         margin: 25px 0;
         position: absolute;
         border: 1px solid #9c9caa;
-    }
-    #introduce-img p {
-        float: left;
-        display: inline-block;
-        left: 5%;
-        top: 100px;
-        font-size: 18px;
-        min-height: 400px;
-        position: absolute;
-        writing-mode: vertical-lr;
-        color: #7a4a51;
     }
     #touch-me form input[type='text']{
         width: 100%;
@@ -161,6 +173,7 @@ body #touch-me #message-board{
         left: 1%;
         opacity: 0.7;
         top: 30px;
+        height: 120px;
     }
     #introduce {
         margin: 20px;
@@ -193,26 +206,12 @@ body #touch-me #message-board{
         padding: 0 5px;
     }
 }
-@media screen and (max-width: 414px) and (min-width: 736px){
+@media screen and (max-width: 736px){
     #nav ul {
-        width: 91% !important;
+        width: 91%;
     }
 }
-@media screen and (max-width: 812px) and (min-width: 375px){
-    #nav {
-        height: 100px;
-    }
-    #introduce ul li {
-        margin-top: 10px;
-        color: #364f3b;
-        font-size: 20px;
-    }
-    #message-board{
-        position: absolute;
-        bottom: 0;
-    }
-}
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1024px) {
     #nav ul {
         width: 100%;
     }

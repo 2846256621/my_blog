@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>添加</title>
+    <link rel="stylesheet" href="../public/css/add.css">
+    <link rel="stylesheet" href="../public/css/view.css">
+    <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/icon/font_kmfbrbs0l5/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_36abcmk0h9g/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_xicukysaxqk/iconfont.css">
+    <link rel="stylesheet" href="../public/icon/font_all/iconfont.css">
+    <script src="../public/icon/font_36abcmk0h9g/iconfont.js"></script>
+    <script src="../public/javascript/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="nav">
+    <ul style="list-style: none">
+        <li style="font-size: 30px;float: left"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
+        <li><a href="/about"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
+        <li><a href="#"><span class="iconfont icon-fenlei-copy"></span>添加</a></li>
+        <li><a href="/files"><span class="iconfont icon-tianjia"></span>归档</a></li>
+        <li><a href="/"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>首页</a></li>
+    </ul>
+</div>
+
+<div id="content">
+    <div id="add-list">
+        <div class="add">
+            <span class="date">
+               <span class="iconfont icon-ic_calendar"></span> 新建文章
+            </span>
+            <hr>
+            <form action="/add" method="post" onsubmit="return validateForm()"   id="article_create">
+                <label for="title">
+                    <span class="text">标题：</span><br>
+                    <input type="text" value="" id="title" name="title" placeholder="please write your title ...">
+                </label>
+                <label for="contents">
+                    <span class="text">文章内容：</span><br>
+                    <textarea id="contents" value="" name="content" placeholder="please write your content ..."></textarea>
+                </label>
+                <div class="btn_all">
+                    <input type="submit" value="发表" class="submit_btn">
+                    <button type="reset" value="" class="submit_btn" id="reset_btn">重置</button>
+                </div>
+            </form>
+        </div>
+        <div id="add-img">
+            <div> ∣ 每个夏天 </div>
+            <div> 我都在这里∣ </div>
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = function(){
+        document.getElementById('reset_btn').onclick = reset;
+    };
+    function reset() {
+        document.getElementById('article_create').reset();
+    }
+    function validateForm(){
+        if(document.forms['article_create']['content'].value === '' ||document.forms['article_create']['title'].value === '' ){
+            alert('请填写完整内容');
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

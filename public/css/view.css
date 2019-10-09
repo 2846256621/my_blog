@@ -27,8 +27,9 @@ body{
     color: #7a4a51;
 
 }
-#nav ul li span{
+#nav ul li a span,#nav ul li span{
     margin-right: 8px;
+    font-size: 27px;
 }
 a{
     cursor: pointer;
@@ -49,11 +50,20 @@ a{
     background-color: rgba(238 ,236,231,0.6);
 }
 #read-article p {
-    font-size: 23px;
+    font-size: 26px;
     color: #ae3637;
     display: block;
     padding: 10px 5px;
     border-bottom: 1px solid #9c9caa;
+}
+.modify_icon{
+    display: inline-block;
+    float: right;
+}
+.modify_icon a span{
+    font-size: 20px;
+    color: #bd2c00;
+    margin-left: 10px;
 }
 body .recommend a{
     display: inline-block;
@@ -80,72 +90,48 @@ body .recommend a{
     font-family: "blog_art_style";
     src: url("../font_style/zhilan.ttf");
 }
-@media screen and (max-width: 500px) {
-    #nav {
-        height: 100px;
-    }
+@media screen and  (max-width: 568px){
     #nav ul{
-        width: 90%;
+        width: 100%;
     }
-    #nav ul li{
-        font-size: 20px;
-        padding: 0 5px;
-    }
-    #nav ul li a{
-        font-size: 20px;
-    }
-    .content-list{
-        display: none;
-    }
-    #content #read-article {
-        width: 81% !important;
-        border: 1px solid #9c9caa;
-        position: relative;
-        top: 20px;
-        border-radius: 4px;
-        margin:0 auto;
+    #nav ul li a {
         font-size: 21px;
-        padding: 2%;
-        color: #343232;
-        background-color: rgba(238 ,236,231,0.6);
+    }
+    #read-article p {
+        font-size: 21px;
+    }
+    #read-article {
+        width: 85%;
+        font-size: 19px;
     }
 
 }
-@media screen and (max-width: 320px) {
+@media screen and  (max-width: 320px){
     #nav {
-        height: 150px;
+        height: 100px;
     }
     #nav ul{
         width: 100%;
     }
     #nav ul li{
-        float: left;
+
         font-size: 20px;
         padding: 0 5px;
     }
+
 }
-@media screen and (max-width: 812px) and (min-width: 375px){
-    #nav ul {
-        width: 99%;
-    }
-}
-@media screen and (max-width: 414px) and (min-width: 736px){
-    #nav ul {
-        width: 91% !important;
-    }
-}
-@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 736px){
     #nav ul {
         width: 100%;
     }
-
+}
+@media screen and (max-width: 1024px) {
+    #nav ul {
+        width: 100%;
+    }
     #nav {
         height: 100px;
     }
 
-    #nav ul li {
-        /*float: left;*/
-        font-size: 19px;
-        padding: 0 1px;
-    }
 }

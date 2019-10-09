@@ -208,7 +208,7 @@ html,body{
     bottom: 10px;
     cursor: pointer;
 }
-.triangle-div div{
+.message_con{
     width: 98%;
     margin: 0 auto;
     position: relative;
@@ -291,3 +291,70 @@ html,body{
     font-family: "blog_art_style";
     src: url("../font_style/zhilan.ttf");
 }
+@media screen and  (max-width: 568px){
+    #container {
+        width: 90%;
+        height: 100%;
+        border:none;
+    }
+    #content-left {
+        display: none;
+    }
+    #content-right {
+        width: 100%;
+    }
+    #btn-list {
+        display: none;
+    }
+    #content-right {
+        left: 0;
+    }
+    .triangle-div span:nth-child(2) {
+        margin: 8px 8px 5px 9px;
+        float: left;
+    }
+    .triangle-div {
+        width: 84%;
+        min-height: 150px;
+    }
+    .dialog-box img {
+        width: 40px;
+        height: 40px;
+        left: -17px;
+    }
+    .triangle-div span:nth-child(1) {
+        margin: 8px 0 5px 8px;
+        float: inherit;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 93%;
+    }
+    #content-right-top >div span:nth-child(1) {
+        font-size: 27px;
+    }
+    #content-right-top {
+        width: 100%;
+        height: 100px;
+    }
+    .comment-all {
+        display: none;
+    }
+    #content-right-top > div {
+        margin: 20px 0;
+        width: 100%;
+    }
+}
+
+    @media screen and  (max-width: 320px){
+
+
+    }
+
+    @media screen and (max-width: 736px){
+
+    }
+    @media screen and (max-width: 1024px) {
+
+
+    }

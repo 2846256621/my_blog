@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Little fairy's blog</title>
     <link rel="stylesheet" href="../public/css/home.css">
     <link rel="stylesheet" href="../public/icon/font_kmfbrbs0l5/iconfont.css">
@@ -33,9 +33,9 @@
     <div id="bg-gound">
         <div id="nav">
         <ul style="list-style: none">
-            <li style="font-size: 30px;float: left"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
+            <li style="font-size: 30px;float: left;"><span class="iconfont icon-maozhao"></span>little fairy yu's blog</li>
             <li><a href="/about"><span class="iconfont icon-guanyuwomen"></span>关于我们</a></li>
-            <li><a href="/sort"><span class="iconfont icon-fenlei-copy"></span>分类</a></li>
+            <li><a href="/add"><span class="iconfont icon-fenlei-copy"></span>添加</a></li>
             <li><a href="/files"><span class="iconfont icon-tianjia"></span>归档</a></li>
             <li><a href="#"><span class="iconfont icon-shouye" style="font-size: 27px;"></span>首页</a></li>
         </ul>
@@ -54,7 +54,7 @@
             {{each data as value}}
             <div class="content-article">
                 <h2>{{value.title}}</h2>
-                <p class="tag">{{value.date}} &nbsp;&nbsp;#</p>
+                <p class="tag">#{{value.date}}</p>
                 <p>{{value.content}}</p>
                 <button class="btn"><a href="/view?id={{value.id}}" id="btn">阅读全文</a></button>
             </div>
@@ -64,8 +64,10 @@
         <div class="content-list">
             <!--搜索-->
             <div id="search">
-                <input value="" placeholder="     搜索">
-                <span class="iconfont icon-sousuo"></span>
+                <form action="/search" method="get" id="search_form">
+                    <input value="" name="search"  placeholder="     搜索">
+                    <span class="iconfont icon-sousuo" onclick="sub_search()"></span>
+                </form>
             </div>
             <!--博主介绍-->
             <div class="my-article blog">
@@ -93,7 +95,7 @@
                 <p>近期文章</p>
                 <ul style="list-style: none">
                     {{each data as value index}}
-                    <li><a href="#"><span class="num">{{index+1}}</span>{{value.title}}</a></li>
+                    <li><a href="/view?id={{value.id}}"><span class="num">{{index+1}}</span>{{value.title}}</a></li>
                     {{/each}}
                 </ul>
             </div>
@@ -126,6 +128,12 @@
     </div>
 
 </div>
+<script>
+    function sub_search(){
+        let form = document.getElementById('search_form');
+        form.submit();
+    }
+</script>
 <script src="../public/javascript/music.js"></script>
 <script src="../public/javascript/home.js"></script>
 </body>
