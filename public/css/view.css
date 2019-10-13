@@ -10,33 +10,6 @@ body{
     background: url("../image/body.jpg") no-repeat  100% 100% fixed;
     background-size:cover;
 }
-#nav{
-    width: 100%;
-    height: 50px;
-    background-color: rgba(180, 184, 203, 0.4);
-    box-shadow: 0 1px 1px #c2b9b9;
-    font-size: 27px;
-    font-weight: bolder;
-    font-family: "blog_art_style",sans-serif;
-}
-#nav ul li{
-    position: relative;
-    float: right;
-    padding: 0 30px;
-    line-height: 50px;
-    color: #7a4a51;
-
-}
-#nav ul li a span,#nav ul li span{
-    margin-right: 8px;
-    font-size: 27px;
-}
-a{
-    cursor: pointer;
-    text-decoration: none;
-    color: #7a4a51;
-    font-size: 27px;
-}
 #read-article {
     width: 56%;
     border: 1px solid #9c9caa;
@@ -91,12 +64,6 @@ body .recommend a{
     src: url("../font_style/zhilan.ttf");
 }
 @media screen and  (max-width: 568px){
-    #nav ul{
-        width: 100%;
-    }
-    #nav ul li a {
-        font-size: 21px;
-    }
     #read-article p {
         font-size: 21px;
     }
@@ -106,32 +73,20 @@ body .recommend a{
     }
 
 }
-@media screen and  (max-width: 320px){
-    #nav {
-        height: 100px;
+@media screen and (max-width: 1024px) and (min-width: 736px){
+    #add-list {
+        width: 93%;
     }
-    #nav ul{
-        width: 100%;
+    .add {
+        width: 74%;
     }
-    #nav ul li{
-
-        font-size: 20px;
-        padding: 0 5px;
+    #read-article {
+        width: 85%;
     }
-
-}
-
-@media screen and (max-width: 736px){
-    #nav ul {
-        width: 100%;
+    .btn_all {
+        width: 90%;
+        margin: 5px auto;
     }
 }
-@media screen and (max-width: 1024px) {
-    #nav ul {
-        width: 100%;
-    }
-    #nav {
-        height: 100px;
-    }
 
-}
+

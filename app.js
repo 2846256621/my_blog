@@ -128,13 +128,13 @@ app.get('/view',function (req,res) {
             console.log('[SELECT ERROR]',err.message);
             return;
         }
-        let converter = new showdown.Converter();
-        let title = converter.makeHtml(result[0].title);
-        let content = converter.makeHtml(result[0].content);
-        console.log( typeof  title, typeof content);
+        // let converter = new showdown.Converter();
+        // let title = converter.makeHtml(result[0].title);
+        // let content = converter.makeHtml(result[0].content);
+        // console.log( typeof  title, typeof content);
         res.render('view.html',{
-             title: title,
-             content: content
+             title: result[0].title,
+             content: result[0].content
         });
     });
 });

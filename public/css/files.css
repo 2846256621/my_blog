@@ -112,12 +112,6 @@
 }
 /*iphone 5*/
 @media screen and  (max-width: 568px){
-    #nav ul{
-        width: 100%;
-    }
-    #nav ul li a {
-        font-size: 21px;
-    }
     .sort ul li .files-a {
         font-size: 21px;
     }
@@ -136,72 +130,11 @@
     }
 
 }
-@media screen and  (max-width: 320px){
-    #nav {
-        height: 100px;
-    }
-    #nav ul{
-        width: 100%;
-    }
-    #nav ul li{
-
-        font-size: 20px;
-        padding: 0 5px;
-    }
-    #sort-img{
-        display: none;
-    }
-    .sort{
-        width: 94%;
-        border-right: 1px solid  #858791;
-    }
-    #sort_title {
-        font-size: 20px;
-        color: #5d5d64;
-        padding: 10px;
-    }
-    .sort ul li {
-        margin: 10px;
-        width: 94%;
-        color: #5d5d64;
-        font-size: 21px;
-        cursor: pointer;
-    }
+@media screen and (max-width: 1024px) and (min-width: 736px){
     #content{
-        display: none;
-    }
-
-}
-
-@media screen and (max-width: 736px){
-    #nav ul {
-        width: 100%;
-    }
-    #container {
-        width: 82%;
-        margin-bottom: 70px;
-    }
-    .sort ul {
-        float: left;
-         margin: 0;
-        list-style: none;
-        width: 92%;
-    }
-    #sort-img{
-        display: none;
+        display:none;
     }
     .sort{
-        width: 94%;
-        border-right: 1px solid  #858791;
-    }
-}
-@media screen and (max-width: 1024px) {
-    #nav ul {
         width: 100%;
     }
-
-    #nav {
-        height: 100px;
-    }
-
 }

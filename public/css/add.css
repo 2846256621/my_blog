@@ -14,31 +14,6 @@ html,body{
     font-family:  "blog_art_style",sans-serif;
     margin-bottom: 10px;
 }
-#nav{
-    width: 100%;
-    height: 50px;
-    background-color: rgba(180, 184, 203, 0.4);
-    box-shadow: 0 1px 1px #c2b9b9;
-}
-#nav ul li{
-    position: relative;
-    float: right;
-    padding: 0 30px;
-    line-height: 50px;
-    color: #7a4a51;
-    font-size: 27px;
-    font-weight: bolder;
-    font-family: "blog_art_style",sans-serif;
-}
-#nav ul li span{
-    margin-right: 8px;
-}
-a{
-    cursor: pointer;
-    text-decoration: none;
-    color: #7a4a51;
-    font-size: 27px;
-}
 #add-list{
     width: 82%;
     margin: 0 auto;
@@ -187,48 +162,5 @@ a{
     .btn_all {
         border-top: 1px solid #f6f4f4;
     }
-    #nav {
-        height: 100px;
-        overflow-x:hidden
-    }
-    #nav ul{
-        height: 100%;
-        width:90%;
-    }
-    #nav ul li{
-        float: left;
-        font-size: 21px;
-        padding: 0 10px;
-    }
-    #nav ul li a{
-        font-size:21px;
-    }
 }
 /*iphone 5*/
-@media screen and (max-width: 320px) {
-    #nav {
-        height: 150px;
-    }
-}
-@media screen and (max-width: 736px){
-    #nav ul {
-        width: 91%;
-    }
-}
-@media screen and (max-width: 1024px) {
-    #nav ul {
-        width: 100%;
-    }
-
-    #nav {
-        height: 100px;
-    }
-
-    #nav ul li {
-        font-size: 19px;
-        padding: 0 1px;
-    }
-    #nav ul li a span{
-        font-size: 19px;
-    }
-}
